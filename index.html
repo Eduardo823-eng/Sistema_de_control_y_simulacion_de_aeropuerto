@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroDash | Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-body">
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <i class="fas fa-plane-departure auth-logo"></i>
+                <h1>AeroDash</h1>
+                <p>Sistema de Gestión Aeroportuaria</p>
+            </div>
+
+            <div class="auth-tabs">
+                <button class="auth-tab active" onclick="switchTab('login')">Iniciar Sesión</button>
+                <button class="auth-tab" onclick="switchTab('register')">Registrarse</button>
+            </div>
+
+
+            <div id="loginForm" class="auth-form active">
+                <form id="loginFormElement">
+                    <div class="input-group">
+                        <label><i class="fas fa-envelope"></i> Correo electrónico</label>
+                        <input type="email" id="loginEmail" placeholder="ejemplo@aerodash.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label><i class="fas fa-lock"></i> Contraseña</label>
+                        <input type="password" id="loginPassword" placeholder="••••••" required>
+                    </div>
+                    <button type="submit" class="btn-primary btn-block">Ingresar al Dashboard</button>
+                </form>
+                <div id="loginMessage" class="message"></div>
+            </div>
+
+
+            <div id="registerForm" class="auth-form">
+                <form id="registerFormElement">
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label><i class="fas fa-user"></i> Nombre</label>
+                            <input type="text" id="regNombre" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="input-group">
+                            <label><i class="fas fa-user"></i> Apellido</label>
+                            <input type="text" id="regApellido" placeholder="Tu apellido" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label><i class="fas fa-envelope"></i> Correo electrónico</label>
+                        <input type="email" id="regEmail" placeholder="ejemplo@aerodash.com" required>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label><i class="fas fa-id-card"></i> Documento</label>
+                            <input type="text" id="regDocumento" placeholder="Opcional">
+                        </div>
+                        <div class="input-group">
+                            <label><i class="fas fa-phone"></i> Teléfono</label>
+                            <input type="tel" id="regTelefono" placeholder="Opcional">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label><i class="fas fa-lock"></i> Contraseña</label>
+                        <input type="password" id="regPassword" placeholder="Mínimo 4 caracteres" required>
+                    </div>
+                    <div class="input-group">
+                        <label><i class="fas fa-check-circle"></i> Confirmar contraseña</label>
+                        <input type="password" id="regConfirmPassword" placeholder="Repite tu contraseña" required>
+                    </div>
+                    <button type="submit" class="btn-primary btn-block">Crear cuenta gratuita</button>
+                </form>
+                <div id="registerMessage" class="message"></div>
+            </div>
+
+            <div class="auth-footer">
+                <p>Cuentas de demostración</p>
+                <div class="demo-buttons">
+                    <button class="demo-btn" onclick="fillDemo('christopher@email.com', '123456')">Christopher</button>
+                    <button class="demo-btn" onclick="fillDemo('yalimar@email.com', '123456')">Yalimar</button>
+                    <button class="demo-btn" onclick="fillDemo('rebeca@email.com', '123456')">Rebeca</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
